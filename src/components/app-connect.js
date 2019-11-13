@@ -11,6 +11,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 import { html } from 'lit-element';
 import { PageViewElement } from './page-view-element.js';
 
+import './connect-firebase.js';
+
 // These are the shared styles needed by this element.
 import { SharedStyles } from './shared-styles.js';
 
@@ -24,11 +26,7 @@ class AppConnect extends PageViewElement {
   render() {
     return html`
       <section>
-        <h2>Connection page</h2>
-        <p>
-	  Here you can connect
-          <a href="/">home</a> and try again?
-        </p>
+        <connect-firebase></connect-firebase>
       </section>
     `
   }

@@ -30,3 +30,15 @@ gives you the following features:
 - [x] Setup Safari testing on Travis.
 - [x] Deploy all templates as demos.
 - [ ] Update to latest [Material Web Components](https://github.com/material-components/material-components-web-components).
+
+## My todos
+
+- [x] Setup all auth provider (google, fb, twitter, github, email)
+- [ ] Configure Terms of service and Privacy policy URL for auth provider validation (check rgpd)
+- [ ] Get email from twitter authentication (after ToS)
+- [ ] Use firebase auth to connect in backend service (JWT)
+- [ ] Print simple information from backend
+- [ ] Check firestore realtime usage in front app
+- [ ] Setup PWA installation
+- [ ] Deploy to gcloud run
+- [ ] 

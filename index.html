@@ -23,7 +23,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       Instead of manually editing the `<base>` tag yourself, you should generally either:
       a) Add a `basePath` property to the build configuration in your `polymer.json`.
-      b) Use the `--base-path` command-line option for `polymer build`.
+      b) Use the `- -base-path` command-line option for `polymer build`.
     -->
     <base href="/">
 
@@ -102,9 +102,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         -webkit-font-smoothing: antialiased;
       }
     </style>
+    <!-- Firebase auth -->
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
   </head>
   <body>
-    <my-app appTitle="my app"></my-app>
+    <my-app appTitle="Zgame"></my-app>
     <noscript>
       Please enable JavaScript to view this website.
     </noscript>
@@ -112,5 +115,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <!-- Built with love using PWA Starter Kit -->
     <script type="module" src="src/components/my-app.js"></script>
+
+    <!-- Firebase auth -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+
   </body>
 </html>
