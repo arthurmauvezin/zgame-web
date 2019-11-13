@@ -203,10 +203,12 @@ class MyApp extends connect(store)(LitElement) {
 
         <!-- This gets hidden on a small screen-->
         <nav class="toolbar-list">
-          <a ?selected="${this._page === 'view1'}" href="/view1">View One</a>
+          <a ?selected="${this._page === 'home'}" href="/home">Home</a>
           <a ?selected="${this._page === 'view2'}" href="/view2">View Two</a>
           <a ?selected="${this._page === 'view3'}" href="/view3">View Three</a>
           <a ?selected="${this._page === 'connect'}" href="/connect">Connect</a>
+          <a ?selected="${this._page === 'tos'}" href="/tos">Terms of services</a>
+          <a ?selected="${this._page === 'privacy'}" href="/privacy">Privacy policy</a>
         </nav>
       </app-header>
 
@@ -215,19 +217,23 @@ class MyApp extends connect(store)(LitElement) {
           .opened="${this._drawerOpened}"
           @opened-changed="${this._drawerOpenedChanged}">
         <nav class="drawer-list">
-          <a ?selected="${this._page === 'view1'}" href="/view1">View One</a>
+          <a ?selected="${this._page === 'home'}" href="/home">Home</a>
           <a ?selected="${this._page === 'view2'}" href="/view2">View Two</a>
           <a ?selected="${this._page === 'view3'}" href="/view3">View Three</a>
           <a ?selected="${this._page === 'connect'}" href="/connect">Connect</a>
+          <a ?selected="${this._page === 'tos'}" href="/tos">Terms of Services</a>
+          <a ?selected="${this._page === 'privacy'}" href="/privacy">Privacy policy</a>
         </nav>
       </app-drawer>
 
       <!-- Main content -->
       <main role="main" class="main-content">
-        <my-view1 class="page" ?active="${this._page === 'view1'}"></my-view1>
+        <app-home class="page" ?active="${this._page === 'home'}"></app-home>
         <my-view2 class="page" ?active="${this._page === 'view2'}"></my-view2>
         <my-view3 class="page" ?active="${this._page === 'view3'}"></my-view3>
         <app-connect class="page" ?active="${this._page === 'connect'}"></app-connect>
+        <terms-service class="page" ?active="${this._page === 'tos'}"></terms-services>
+        <privacy-policy class="page" ?active="${this._page === 'privacy'}"></privacy-policy>
         <my-view404 class="page" ?active="${this._page === 'view404'}"></my-view404>
       </main>
 
